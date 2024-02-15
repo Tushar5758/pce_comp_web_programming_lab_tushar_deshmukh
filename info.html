@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charging Station Finder</title>
+    <link rel="stylesheet" href="info.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="nav-logo">ChargingFinder</a>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>Find Charging Stations</h1>
+        <form id="locationForm">
+            <div class="input-group">
+                <label for="fromDestination">From:</label>
+                <input type="text" id="fromDestination" name="fromDestination" required>
+            </div>
+            <div class="input-group">
+                <label for="toDestination">To:</label>
+                <input type="text" id="toDestination" name="toDestination" required>
+            </div>
+            <button type="submit" class="btn-submit">Search</button>
+        </form>
+        <button onclick="window.location.href='index.html';" class="btn-map">Go to Map</button>
+    </div>
+</body>
+</html>

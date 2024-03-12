@@ -1,0 +1,11 @@
+<?php
+$na=$_POST['name'];
+$dob=$_POST['dob'];
+$uname=$_POST['username'];
+$landmark=$_POST['land'];
+$own=$_POST['own'];
+$st=$_POST['toc'];
+$type=$_POST['type'];
+$from=$_POST['from'];
+$to=$_POST['to'];
+?>

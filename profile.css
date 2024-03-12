@@ -1,0 +1,64 @@
+/*body{
+	
+	padding-top: 50px;
+	font-family: arial;
+}*/
+ul{
+	padding: 0;
+}
+#container{
+	border-radius: 5%;
+	background: whitesmoke;
+	width: 1000px;;
+	height: 800px;
+	margin: 30px auto;
+	overflow: hidden;
+	padding: 10px;
+
+}
+#con{
+	overflow: auto;
+	top: 60px;
+	background-image: url("car.jpg") ;
+	background-size:cover;
+	height: 1000px;
+	width: 100%;
+}
+/*#nav{
+	position: fixed;
+	border-bottom: solid black 1px;
+	top: 0;
+	width: 100%;
+	color: black;
+	height: 60px;
+	background: #fff;
+}
+#nav ul{
+	padding-top: 13px;
+	padding-left: 10px;
+}
+#nav li{
+	list-style: none;
+	float: left;
+	padding-right: 20px;
+}*/
+#p_img{
+	margin-top: 20px;
+	text-align: center;
+}
+img {
+	text-align: center;
+    margin-bottom: 20px;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	object-fit: cover;
+	border: 3px solid black;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#details{
+	border: 1px solid black;
+	
+	margin: 20px;
+	padding: 20px;
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Trip Details</title>
+    <link rel="stylesheet" type="text/css" href="trip.css">
+    <style>
+        #lightningBolt{
+        position: relative;
+        background-color:transparent;
+        border: 2px solid black;
+       
+        }
+       
+       
+    </style>
+</head>
+ <body>
+    <div id="nav">
+        <ul>
+            <li><canvas id="lightningBolt" width="60" height="60"></canvas></li>
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+    <div id="con">
+        <div id="container">
+            
+            <form method="post" action="trip.php">
+                <div id="persnal">
+                    <h2> Personal Info</h2>
+                        
+                        <p>Name:</p><input type="text" name="name"><br>
+                        <p>DoB:</p><input type="text" name="dob"><br>
+                        <p>Username:</p><input type="text" name="username"><br>
+                
+                </div>
+                <div id="ev">
+                    
+                        <h2> EV Info</h2>
+                        
+                        <p>Nearest Landmark:</p><input type="text" name="land" ></input><br>
+                        <p>Ownership type:</p><input type="text" name="own" ></input><br>
+                        <p>Type of Charge:</p><input type="text" name="toc" ></input><br>
+                        <p>Station Type:</p><input type="radio" name="type"  value="1">public</input>
+                        <input type="radio" name="type"  value="2">Semi-public</input><br>
+                        
+                    
+                </div>
+                
+            
+                <div class="clr"></div>
+                <br>
+                
+                <div id="foot">
+                    <input type="submit">
+                </div>
+            </form>
+        </div>
+        <div id="vedio">
+            <video id=s width="450" height="250" controls>
+                <source src="charging.mp4" type="video/mp4">
+                <track label="English" kin="subtitles" srclang="en" src="demo_en.vtt" default>
+                <track label="Marati" kind="subtitles" srclang="mr" src="demo_ma.vtt">
+            </video>
+        </div>
+        <div id="audio">
+            <audio src="ev.mp3" controls ></audio>
+        </div>
+        
+        
+    </div>
+    
+    <script>
+        const canvas = document.getElementById('lightningBolt');
+        const ctx = canvas.getContext('2d');
+    
+        ctx.beginPath();
+        ctx.arc(30, 20, 15, 0, 2 * Math.PI); 
+        ctx.fillStyle = "green"; 
+        ctx.fill();
+    
+        ctx.beginPath();
+        ctx.arc(30, 20, 20,0.8*Math.PI,0.2*Math.PI);
+        ctx.moveTo(12, 30);
+        ctx.lineTo(30, 60);
+        ctx.moveTo(48, 30);
+        ctx.lineTo(30, 60);
+        ctx.stroke();
+        
+        ctx.beginPath();
+        ctx.moveTo(30, 5);
+        ctx.lineTo(22.5, 22.5);
+        ctx.moveTo(30, 5);
+        ctx.lineTo(30, 17.5);
+        ctx.moveTo(22.5, 22.5);
+        ctx.lineTo(32.5,22.5 );
+        ctx.moveTo(30, 17.5);
+        ctx.lineTo(37.5,17.5 );
+        ctx.moveTo(32.5, 22.5);
+        ctx.lineTo(30,35 );
+        ctx.moveTo(37.5, 17.5);
+        ctx.lineTo(30,35 );
+        ctx.fillStyle ='yellow'; // Yellow color
+        ctx.fill();
+        ctx.strokeStyle = 'yellow'; // Yellow color
+        ctx.stroke();
+        
+        ctx.beginPath();
+        ctx.arc(30, 70, 5, 0, 2 * Math.PI); 
+        ctx.strokeStyle = "black";
+        ctx.stroke();
+     
+      </script>
+</body>
+</html>

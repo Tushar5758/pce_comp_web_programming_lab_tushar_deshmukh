@@ -1,0 +1,106 @@
+body{
+	padding-top: 60px;
+	color: black;
+	font-family: arial;
+}
+ul{
+	padding: 0;
+}
+#con{
+	overflow: auto;
+	background-image: url("car.jpg") ;
+	background-size:cover;
+	height: 800px;
+	width: 100%;
+}
+#container{
+	float: left;
+	border-radius: 5%;
+	background: #fff;
+	width: 50%;
+	height: 600px;
+	margin-top: 80px ;
+	margin-left: 50px;
+	padding: 20px;
+
+}
+#vedio{
+	float: left;
+	border-radius: 5%;
+	background: #fff;
+	width:450px;
+	height: 250px;
+	margin-top: 90px;
+	margin-left: 50px;
+	padding: 20px;
+
+}
+#audio {
+    float: left;
+	border-radius: 5%;
+	background: #fff;
+	margin-top: 50px;
+	margin-left: 50px;
+}
+#map{
+	border: solid black 1px;
+	float: left;
+	margin-top: 50px;
+	margin-left: 50px;
+	width: 200px; 
+	height: 200px;
+	background-color: #fff;
+}
+#nav{
+	border-bottom:solid black 1px;
+	top: 0;
+	width: 100%;
+	color: black;
+	height: 80px;
+	background:#b7b4b4;
+	position: fixed;
+}
+#nav ul{
+	
+	padding-top: 13px;
+	padding-left: 10px;
+}
+#nav li{
+	list-style: none;
+	float: left;
+	padding-right: 20px;
+}
+#persnal{
+
+	margin-top: 20px;
+	padding: 10px ;
+	float: left;
+	width: 40%;
+
+}
+#ev{
+	margin-top: 20px;
+	padding: 10px ;
+	float: right;
+	width: 40%;
+}
+.clr{
+	clear: both;
+}
+#foot input{
+	height: 50px;
+	width: 100px;
+}
+#foot input:hover{
+	background: #ff0000;
+}
+
+
+input[type="text"] {
+	width: 50%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	font-size: 16px;
+}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>blog</title>
+  
+    <style>
+        /* CSS styles for the body */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        /* Padding for the main content */
+        #con{
+            padding-top: 60px;
+        }
+
+        /* Styling for the header */
+        #header {
+            background-color: #4CAF50;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        /* Styling for the main content */
+        #main {
+            text-align: center;
+            margin: 50px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: #ecf9f2;
+        }
+
+        /* Styling for the heading */
+        h2 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        /* Styling for action buttons */
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .action-button {
+            background-color: #45a049;
+            color: white;
+            font-size: 18px;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        /* Hover effect for action buttons */
+        .action-button:hover {
+            background-color: #3f8742;
+        }
+
+        /* Styling for the navigation bar */
+        #nav{
+            font-family: Montserrat classic;
+            position: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start; 
+            top: 0;
+            height: 60px;
+            width: 100%;
+            background-color:white;
+            color:#72c311;
+        }
+
+        /* Styling for navigation links */
+        #nav ul{
+            padding-top: 13px;
+            padding-bottom: 13px;
+            padding-left: 10px;
+        }
+
+        #nav li{
+            list-style: none;
+            float: left;
+            padding-right: 20px;
+        }
+
+        .nav-links {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .nav-links li {
+            display: inline;
+            margin-right: 20px;
+        }
+        
+        .nav-links li:last-child {
+            margin-right: 0;
+        }
+        
+        .nav-links li a {
+            color:#72c311;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 20px;
+            border-radius: 20px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .nav-links li a:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div id="nav">
+        <!-- Navigation Links -->
+        <ul class="nav-links">
+            <li><a href="#">#</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content Section -->
+    <div id="con">
+        <!-- Header Section -->
+        <div id="header">
+            <!-- Title of the Blog -->
+            <h1>Blog</h1>
+        </div>
+
+        <!-- Main Content Area -->
+        <div id="main">
+            <!-- Heading for the Blog Section -->
+            <h2>Blog</h2>
+            
+            <!-- Action Buttons for Creating and Reading Blogs -->
+            <div class="action-buttons">
+                <!-- Button to create a new blog -->
+                <button class="action-button" onclick="location.href='blogwrite.html'">Create a Blog</button>
+                
+                <!-- Button to read existing blogs -->
+                <button class="action-button" onclick="location.href='blogread.php'">Read a Blog</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLOG</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        #con{
+            padding-top: 60px;
+        }
+        #header {
+            background-color: #4CAF50;
+            padding: 10px;
+            text-align: center;
+            color: white;
+            position: inherit;
+        }
+
+
+        #main {
+            text-align: center;
+            margin: 50px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: #ecf9f2;
+        }
+        /* Username and Title input styles */
+        #u, #t {
+           font-size: 18px;
+           padding-top: 20px;
+           text-align: left; 
+           margin-left: 20px; 
+           padding-left: 100px;
+        }
+        
+        input[type="text"] {
+            width: 60%;
+            height: 20px;
+            font-size: 18px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+        
+        /* Textarea styles */
+        textarea {
+            width: 80%;
+            height: 400px;
+            margin: 20px;
+            padding: 15px;
+            font-size: 18px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            font-size: 18px;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        /* Navigation bar styles */
+        #nav{
+            font-family: Montserrat classic;
+            position: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start; 
+            top: 0;
+            height: 60px;
+            width: 100%;
+            background-color:white;
+            color:#72c311;
+
+        }
+        #nav ul{
+            padding-top: 13px;
+            padding-bottom: 13px;
+            padding-left: 10px;
+        }
+        #nav li{
+            list-style: none;
+            float: left;
+            padding-right: 20px;
+        }
+        .nav-links {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .nav-links li {
+            display: inline;
+            margin-right: 20px;
+        }
+        
+        .nav-links li:last-child {
+            margin-right: 0;
+        }
+        
+        .nav-links li a {
+            color:#72c311;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 20px;
+            border-radius: 20px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .nav-links li a:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <ul class="nav-links">
+            <li><a href="#">#</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    <div id="con">
+    <div id="header">
+        <h1>Blog</h1>
+    </div>
+    <div id="main">
+
+        <h2>Write Your Blog</h2>
+        <!-- Form for submitting a blog -->
+        <form action="blogsubmit.php" method="post" name="frm" onSubmit="return check();">
+            <div id="u">Username:<input type="text" name="u"><span id="user" style="color: red; "></span></div>
+            <div id="t">Title:<input type="text" name="title"><span id="title" style="color: red; "></span></div>
+            <textarea name="content" placeholder="Write your blog..."></textarea><span id="content" style="color: red;"></span><br>
+            <input type="submit" name="submit">
+        </form>
+    </div>
+</div>
+    <!-- JavaScript for form validation -->
+    <script>
+
+    function check() {
+        var uname = document.frm.u.value;
+        var con = document.frm.content.value;
+        var ti = document.frm.title.value;
+        var unamePattern = /^\w{3,20}$/;
+        var number = /^[0-9]+$/;
+        var titlePattern = /^[a-zA-Z0-9][a-zA-Z0-9\s]{1,48}[a-zA-Z0-9]$/;
+        var userError = document.getElementById("user");
+        var titleError = document.getElementById("title");
+        var contentError = document.getElementById("content");
+
+        if (uname == "") {
+            userError.innerText = "*  enter username";
+            return false;
+        } else if (number.test(uname)) {
+            userError.innerText = "*  enter only letters in username";
+            return false;
+        } else if (!unamePattern.test(uname)) {
+            userError.innerText = "* No special character at the beginning or end of the username, and spaces in between";
+            return false;
+        } else {
+            userError.innerText = "";
+        }
+
+        if (ti == "") {
+            titleError.innerText = "*  enter title";
+            return false;
+        } else if (number.test(ti)) {
+            titleError.innerText = "* No number in title";
+            return false;
+        } else if (!titlePattern.test(ti)) {
+            titleError.innerText = "* No special character at the beginning or end of the title, and spaces in between";
+            return false;
+        } else {
+            titleError.innerText = "";
+        }
+
+        if (con == "") {
+            contentError.innerText = "*  enter content";
+            return false;
+        } else if (con.length > 5000) {
+            contentError.innerText = "*  reduce content length";
+            return false;
+        } else {
+            contentError.innerText = "";
+        }
+
+        return true;
+    }
+    </script>
+</body>
+</html>
